@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link   href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  </head>
+  
+<body>
+  <div class="flex-container">
+    <nav id="navbar" class="main--light">
+      <header class="nav-header">
+        <h1>Python</h1>
+      </header>
+      <p class="nav-header-desc">
+        <small>versatile, readable, popular programming language with a large community, %ideal for web, data, and AI due to simplicity and extensive library.</small>
+      </p>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know"
+            >What you should already know</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Python_compared_to_other_Languages"
+            >Python compared to other Languages</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
+        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li>
+          <a class="nav-link" href="#Declaring_variables"
+            >Declaring variables</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
+        <li>
+          <a class="nav-link" href="#Global_variables">Global variables</a>
+        </li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_types">Data types</a></li>
+        <li>
+          <a class="nav-link" href="#if_else_statement"
+            >if else statement</a
+          >
+        </li>
+        <li><a class="nav-link" href="#while_statement">while statement</a></li>
+        <li>
+          <a class="nav-link" href="#Function_declarations"
+            >Function declarations</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section main--dark" id="Introduction">
+        <header class="section-header">
+          <h1>Introduction</h1>
+        </header>
+        <article>
+          <p>
+            Python, a programming language that has captured the hearts of developers
+            worldwide, is renowned for its versatility, readability, and powerful capabilities. 
+            Whether you're diving into web development, delving into data analysis, or exploring
+            the realms of artificial intelligence, Python stands as a steadfast companion on your coding journey.
+            What sets Python apart is its simplicity and elegant syntax, making it not only easy for beginners
+            to grasp but also a joy for experienced developers to work with. Python's philosophy of emphasizing
+            clean and readable code has earned it a special place in the hearts of programmers.
+          </p>
+
+          <p>
+            But Python isn&apos;t just about aesthetics; it&apos;s a workhorse in the world
+            of technology. Its extensive standard library provides a rich toolkit
+            for tackling a wide array of tasks, from handling data and working with
+            files to implementing complex algorithms.
+          </p>
+          <p>
+            Python's versatility shines through in two key aspects:
+          </p>
+          <ul class="list">
+            <li class="list__items">
+              Multi-paradigm: Python supports multiple programming paradigms,
+              including object-oriented, imperative, and functional programming,
+              giving you flexibility in your coding approach.
+            </li class="list__items">
+            <li class="list__items">
+              Readability: Python's code is known for its clarity and minimalistic
+              style, making it easier for developers to collaborate and maintain projects.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section main--light" id="What_you_should_already_know">
+        <header class="section-header">
+          <h1>What you should already know</h1>
+        </header>
+        <article>
+          <p>Before diving into Python, it's helpful to have a foundation in the following areas:
+          </p>
+
+          <ul class="list">
+            <li class="list__items">
+              Basic Programming Concepts: Familiarity with fundamental programming concepts
+              such as variables, data types, loops, and conditional statements will give you a head start.
+            </li>
+            <li class="list__items">Text Editor or IDE: You should be comfortable using a text editor or integrated development environment (IDE) to write and execute code. Popular choices include Visual Studio Code, PyCharm, and  Sublime Text.
+            </li>
+            <li class="list__items">
+              Command Line Basics: Understanding how to navigate your computer's command line or terminal will be useful for running Python scripts and managing your development environment.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section main--dark" id="Python_compared_to_other_Languages">
+        <header class="section-header">
+          <h1>Python compared to other languages</h1> 
+        </header>
+        <article>
+          <p>
+            Readability and Simplicity: Python's elegant and clean syntax promotes readability,
+            making it an excellent choice for beginners. It emphasizes indentation for code structure,
+            reducing the need for excessive brackets or parentheses.
+          </p>
+
+          <p>
+            Versatility: Python's versatility is a standout feature. While some languages
+            excel in specific domains, Python can be applied to a wide range of tasks,
+            including web development, data analysis, scientific computing, artificial intelligence,
+            and more. Its extensive standard library provides ready-to-use modules for various purposes.
+          </p>
+          <p>
+            Community and Ecosystem: Python boasts a vibrant and welcoming community of developers.
+            It offers a vast ecosystem of libraries and frameworks, such as Django, Flask, TensorFlow,
+            and NumPy, empowering developers to tackle diverse projects efficiently.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--light" id="Hello_world">
+        <header class="section-header">
+          <h1>Hello world</h1>
+        </header>
+        <article>
+          <p>In Python, printing <code>&quot;Hello, World!&quot;</code> to the console is a straightforward task. You can achieve this with just a single line of code:</p>
+          <span><pre><code>
+            print(&quot;Hello, World!&quot;)
+          </code></pre></span>
+
+          <p>This concise and beginner-friendly syntax is one of the reasons Python is often recommended as a first programming language. It allows you to quickly see results and get started with coding.</p>
+        </article>
+      </section>
+      <section class="main-section main--dark" id="Variables">
+        <header class="section-header">
+          <h1>Variables</h1>
+        </header>
+        <p>
+          In the world of programming, variables are like containers or placeholders that store data. They serve as a means to give a name or label to a specific piece
+          of information, making it easy to reference and manipulate that data within your code. Think of variables as named boxes where
+          you can store different types of information, such as numbers, text, or complex data structures.
+        </p>
+        <p>
+          When working with variables in Python, you don't need to declare their data type explicitly, unlike some other programming languages.
+          Python is dynamically typed, which means it determines the type of a variable based on the value assigned to it. This flexibility
+          simplifies coding and allows you to change the contents of a variable easily. For example, a variable could hold an integer value at one point and then store a string of text later in the program.
+        </p>
+        <p>
+          Choosing meaningful names for variables is a crucial aspect of writing clean and readable code. Descriptive variable names make it clear what kind of information is stored in them,
+          which is especially helpful when working on larger projects or collaborating with others. Properly named variables can enhance the overall clarity and maintainability of your code.
+        </p>
+      </section>
+      <section class="main-section main--light" id="Declaring_variables">
+        <header class="section-header">
+          <h1>Declaring variables</h1>
+        </header>
+        <article>
+          <p>
+            In Python, declaring variables is a fundamental step in programming. It&apos;s the process of creating a variable and assigning a value to it. This is achieved using a straightforward syntax. Let's look at a few examples:
+          </p>
+          <span><pre><code>
+  # Example 1: Declaring an integer variable
+  age = 25
+
+  # Example 2: Declaring a string variable
+  name = &quot;John Doe&quot;
+
+  # Example 3: Declaring a boolean variable
+  is_student = True</code></pre></span>             
+          <p>
+            In these examples, we declare variables age, name, and is_student. The variable name comes on the left side of the equal sign (=), and the value we want to assign to it comes on the right side. Python will automatically determine the data type based on the assigned value, whether it's an integer, string, or boolean.
+          </p>
+          <p>
+            One important thing to note is that variable names in Python should follow certain rules. They must start with a letter (a-z, A-Z) or an underscore (_) and can be followed by letters, numbers, or underscores. Additionally, Python is case-sensitive, so my_variable and My_Variable would be treated as distinct variables.
+          </p>
+          <p>
+            Declaring variables is a foundational concept in Python and is essential for storing and manipulating data within your programs.
+          </p> 
+        </article>
+      </section>
+      <section class="main-section main--dark" id="Variable_scope">
+        <header class="section-header">
+          <h1>Variable scope</h1>
+        </header>
+        <article>
+          <p>
+            Local Scope: Variables declared within a function are local and can only be used within that function.
+          </p>
+ 
+          <p>
+            Global Scope: Variables declared outside of functions or at the top level are global and accessible from anywhere in the script.           
+          </p>
+          <span><code><pre>
+  # Global variable
+  global_variable = 100
+
+  def my_function():
+      # Local variable
+      local_variable = 42
+      print(&quot;Local variable:",      local_variable)
+      print(&quot;Global variable:",  global_variable)
+
+  my_function()
+  print(&quot;Global variable (outside function):",<br> global_variable)
+</pre></code></span>
+          <p>
+            In this code, local_variable is accessible only within the my_function() function, while global_variable can be used both inside and outside the function, demonstrating the distinction between local and global scope.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--light" id="Global_variables">
+        <header class="section-header">
+          <h1>Global variables</h1>
+        </header>
+        <article>
+          <p>
+            In Python, global variables are variables declared at the top level of a script
+            or outside of any function. They are accessible from anywhere in the script, making them valuable for storing data that needs to be shared across multiple functions or parts of your code.
+          </p>
+
+          <p>
+            Global variables simplify the sharing of information between different parts of your program, but it's essential 
+            to use them judiciously to maintain code clarity and prevent unintended side effects. Overusing global variables can
+            lead to code that is difficult to debug and maintain, as changes made to global variables can affect various parts of 
+            your program. Therefore, it's generally recommended to limit the use of global variables to situations where they are genuinely needed for shared data. 
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--dark" id="Constants">
+        <header class="section-header">
+          <h1>Constants</h1>
+        </header>
+        <article>
+          <p>
+            In Python, constants are variables whose values should not be changed once they are assigned. While Python
+            doesn&apos;t have a built-in <code>&quot;constant&quot;</code> keyword like some other languages,
+            it uses naming conventions to indicate that a variable is intended to be a constant. Typically, constant names are written in uppercase letters to distinguish them from regular variables.
+          </p>
+
+          <span><pre><code>
+            # Example of a constant
+            PI = 3.14159265359
+
+          </code></pre></span>
+          <p>
+            In the example above, PI is treated as a constant because it's written in uppercase letters. It signifies that its value should remain constant throughout the program. 
+          </p>
+
+          <p>
+            It&apos;s worth noting that Python does not enforce constant behavior; it's more 
+            of a convention. If you modify a constant in Python, the interpreter won&apos;t prevent you from doing so. However, it&apos;s considered good practice to treat variables named in uppercase as constants and refrain from changing their values.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--light" id="Data_types">
+        <header class="section-header">
+          <h1>Data types</h1>
+        </header>
+        <article>
+          <ul class="list">
+            <li class="list__item">
+              Lists in Python can hold elements of various data types within the same list, allowing for versatility in data storage.
+            </li>
+            <li class="list__item">
+              You can create lists that contain a mix of data types, including integers, strings, booleans, floats, and even other lists or complex objects.    
+            </li>
+            <li class="list__item">
+              Lists are ordered and mutable, allowing you to easily add, remove, or modify elements, making them a powerful tool for managing collections of data in your programs.      
+            </li>
+          </ul>
+          <p>
+            Lists in Python can hold elements of various data types within the same list, allowing for versatility in data storage.
+            You can create lists that contain a mix of data types, including integers, strings, booleans, floats, and even other lists or complex objects. This flexibility
+            enables you to structure your data in diverse ways to suit your program's needs.
+            Lists are ordered and mutable, allowing you to easily add, remove, or modify elements, making them a powerful tool for managing collections of data in your programs.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--dark" id="if_else_statement">
+        <header class="section-header">
+          <h1>if else statement</h1>
+        </header>
+        <article>
+          <p>
+            In Python, the if-else statement is a fundamental control structure that allows you to make decisions in your code
+            based on conditions. It helps your program take different paths depending on whether a condition is true or false.          
+          </p>
+          <span><pre><code>
+  # Example of an if-else statement
+  age = 18
+
+  if age >= 18:
+      print(&quot;You are an adult.")
+  else:
+      print(&quot;You are not yet an adult.")
+          </code></pre></span>
+          <p>
+            In this example, the if-else statement checks if the variable age is greater than or equal to 18. If the condition is true, it executes the code block under if, and if it's false, it executes the code block under else.
+          </p>
+          <p>
+            The if-else statement is essential for creating decision-making logic in your programs, allowing your code to respond dynamically to different situations.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--light" id="while_statement">
+        <header class="section-header">
+          <h1>while statement</h1>
+        </header>
+        <article>
+          <p>
+            In Python, the while statement is a powerful control structure that allows you to create loops. Loops are used to repeatedly execute a block of code as long as a specified condition remains true.
+          </p>
+
+          <span><pre><code>
+  # Example of a while loop
+  count = 0
+
+  while count < 5:
+      print(&quot;Count:", count)
+      count += 1
+
+          </code></pre></span>        
+          <p>
+            In this example, the while loop runs as long as the condition count &lt; 5 is true. It increments the count variable with each iteration and prints the current value of count.
+          </p>
+          <p>
+            While loops are handy when you want to execute a block of code repeatedly until a specific condition is no longer met. However, be cautious when using while loops to avoid infinite loops, where the condition never becomes false, as they can cause your program to run indefinitely.
+          </p>
+          <ul class="list">
+            <li class="list__item">
+              A common use of the while loop is for counting. You can set up a counter variable and increment it within the loop until a condition is met. For instance, you can count from 0 to 4 by starting with count at 0 and incrementing it until it reaches 5, producing the numbers 0, 1, 2, 3, and 4.
+            </li>
+            <li class="list__item">
+              While loops are handy when interacting with users. You can use a while loop to continually prompt the user for input until they provide a specific response. In this case, the loop keeps asking the user for input until they type &apos;quit&apos; to exit.
+            </li>
+            <li class="list__item">
+              While loops can also be used for numerical calculations. In this example, a while loop is used to add numbers from 1 to 10 and calculate their sum. The loop continues until num exceeds 10, accumulating the sum of these numbers.
+            </li>
+          </ul>
+          <p>
+            While loops are versatile and valuable for scenarios where you need to perform tasks repeatedly until a certain condition is met. However, it&apos;s essential to ensure that the loop's condition eventually becomes false to avoid infinite loops, which can lead to your program running indefinitely.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--dark" id="Function_declarations">
+        <header class="section-header">
+          <h1>Function declarations</h1>
+        </header>
+        <article>
+          <p>
+            In Python, functions are blocks of reusable code that perform specific tasks. They enhance code modularity and readability, making it easier to manage and understand complex programs. Here are some common function declarations:
+          </p>
+
+          <ul class="list">
+            <li class="list__item">
+              Functions in Python are declared using the def keyword. They can accept input arguments and return values, but they don't have to.
+            </li>
+            <li class="list__item">
+              You can provide default values for function parameters. These defaults are used when an argument isn't specified.
+            </li>
+            <li class="list__item">
+              Functions can accept multiple arguments. You specify them within the parentheses, separated by commas.
+            </li>
+            <li class="list__item">
+              To use a function, you simply call it by its name, passing the required arguments.
+            </li>
+          </ul>
+          <p>
+            Functions play a central role in structuring Python code, enhancing its reusability and readability while enabling the organization of complex logic into manageable blocks of code.
+          </p>
+        </article>
+      </section>
+      <section class="main-section main--light" id="Reference">
+        <header class="section-header">
+          <h1>Reference</h1>
+      </header>
+        <article>
+          <ul class="list">
+            <li class="list__item">
+              All the documentation in this page is taken from
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                >Google</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>   
