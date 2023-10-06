@@ -22,7 +22,7 @@
   --main-fw: 600;
   
   --general-padding: 1em;
-  --padding-list: 3em;
+  --padding-list: 1em;
   --general-margin: 1em;
   --margin: ; 
 }
@@ -34,7 +34,7 @@
   margin: 0;
   padding: 0;
   letter-spacing: 0.5px;
-/*scroll-behavior: smooth;*/
+  /*scroll-behavior: smooth;*/
 }
 
 section,
@@ -97,7 +97,8 @@ span {
   flex-direction: row;
   /*gap: var(--general-padding);*/
   /*padding: var(--general-padding);*/
-  padding-top: 0;
+  padding-top: var(--padding-list);
+  
 }
 
 
@@ -111,12 +112,20 @@ span {
   overflow-y: auto;
   color: ;
   background-color: var(--nav-bg);
-  padding: var(--padding-list);
+  padding: 0;
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--dark-font);
+  color: var(--light-font);
+  padding-left: 0.5rem;
+  border-left: 0.5rem solid transparent;
+  transition: all 200ms ease-in-out;
+}
+
+.nav-link:hover {
+  border-left-color: #020202;
+  color: #020202;
 }
 
 .nav-list > li {
@@ -177,6 +186,7 @@ span {
   }
   .nav-header h1 {
     font-size: 6em;
+    margin-top: 1rem;
     padding-bottom: 1rem;
   }
   #navbar p {
@@ -187,6 +197,9 @@ span {
     gap: 2em;
     height: auto;
     overflow-x: auto;
+  }
+  body {
+    overflow-x: hidden;
   }
   .nav-list li {
     flex-shrink: 0;
