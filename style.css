@@ -6,25 +6,25 @@
   --nav-bg: #00b5de;
   --dark-span-bg: #005294;
   --light-span-bg: #00becc;
-  
-  
+
+
   --light-font: #e8efff;
   --dark-font: #010d3f;
   --header-font: #d3e518;
-  
+
   --header-ff: 'Major Mono Display', monospace;
   --main-ff: 'Open sans', sans-serif;
-  
+
   --main-fs: 1.8em;
-  --header-fs: 3em;
+  --header-fs: 3.5em;
   --code-fs: 1em;
-  --title-fs: 4em;
+  --title-fs: 4.5em;
   --main-fw: 600;
-  
+
   --general-padding: 1em;
   --padding-list: 1em;
   --general-margin: 1em;
-  --margin: ; 
+  --margin: ;
 }
 
 *,
@@ -50,6 +50,8 @@ li {
 
 h1 {
   font-family: var(--header-ff);
+  text-align: center;
+  line-height: 1.2;
 }
 section h1 {
   font-size: var(--header-fs);
@@ -66,7 +68,6 @@ span {
   border-radius: 1em;
 
 }
-
 h1,
 p,
 li,
@@ -97,10 +98,12 @@ span {
   flex-direction: row;
   /*gap: var(--general-padding);*/
   /*padding: var(--general-padding);*/
-  padding-top: var(--padding-list);
-  
-}
 
+
+}
+body::-webkit-scrollbar{
+  display: none;
+}
 
 /* NAV BAR */
 
@@ -112,7 +115,7 @@ span {
   overflow-y: auto;
   color: ;
   background-color: var(--nav-bg);
-  padding: 0;
+  padding: 4rem 0;
 }
 
 .nav-link {
@@ -133,7 +136,7 @@ span {
 }
 
 .nav-list {
-  padding-left: 0;
+  padding-left: 2rem;
 }
 
 /* MAIN CONTENT */
@@ -150,7 +153,7 @@ span {
   color: var(--dark-font);
 }
 .main-section {
-  padding: var(--padding-list);
+  padding: 5.5em;
 }
 
 .main--light span {
@@ -183,6 +186,7 @@ span {
     height: 13em ;
     overflow-y: initial;
     background-color: var(--nav-bg);
+    padding: 0;
   }
   .nav-header h1 {
     font-size: 6em;
@@ -197,6 +201,7 @@ span {
     gap: 2em;
     height: auto;
     overflow-x: auto;
+    padding-left: 0;
   }
   body {
     overflow-x: hidden;
