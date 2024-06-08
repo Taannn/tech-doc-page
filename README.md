@@ -1,2 +1,4 @@
-# tech-doc-page
-freeCodeCamp RWD cert-project #3
+# freeCodeCamp Responsive Web Design Certification Project #3
+
+## Screenshot
+![Example Image](./live-view.png)
